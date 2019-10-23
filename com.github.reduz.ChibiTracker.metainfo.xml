@@ -20,18 +20,15 @@
 
 ​  <launchable type="desktop-id">com.github.reduz.ChibiTracker.desktop</launchable>
 
-  <categories>
-    <category>AudioVideo</category>
-    <category>Audio</category>
-    <category>Sequencer</category>
-  </categories>
 
   <screenshots>
     <screenshot type="default">
       <image type="source">http://content.pouet.net/files/screenshots/00027/00027385.jpg</image>
     </screenshot>
   </screenshots>
-
+  <releases>
+    <release version="1.4.2" date="2010-03-26" />
+  </releases>
   <content_rating type="oars-1.1" />
 
   <url type="homepage">https://github.com/reduz/chibitracker</url>

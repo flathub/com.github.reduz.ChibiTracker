@@ -1,0 +1,13 @@
+--- a/fileio/saver_xm.cpp	2019-10-23 15:35:29.486968918 +0200
++++ b/fileio/saver_xm.cpp	2019-10-23 15:35:27.469977882 +0200
+@@ -381,8 +381,8 @@
+ 	
+ 		Instrument *ins=song->get_instrument(i);
+ 		
+-		char sample_table[16]={-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1};
+-		char note_table[96];
++		int sample_table[16]={-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1};
++		int note_table[96];
+ 		int sample_count=0;
+ 
+ 		for (int s=0;s<96;s++)
