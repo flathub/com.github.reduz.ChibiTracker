@@ -1,6 +1,6 @@
 app-id: com.github.reduz.ChibiTracker
 runtime: org.freedesktop.Platform
-runtime-version: '19.08'
+runtime-version: '20.08'
 sdk: org.freedesktop.Sdk
 command: chibitracker
 finish-args:
@@ -12,12 +12,16 @@ cleanup:
   - /bin/scons*
   - /man
   - /lib/scons*
+  - /bin/python*
+  - /bin/pip*
+  - /bin/*.py
+  - /lib/pkgconfig
 modules:
   - shared-modules/SDL/SDL-1.2.15.json
   - shared-modules/python2.7/python-2.7.json
   - name: scons
     buildsystem: simple
-    cleanup: 
+    cleanup:
       - '*'
     build-commands:
       - python setup.py install --prefix=/app
@@ -62,7 +66,4 @@ modules:
             url: https://github.com/ImageMagick/ImageMagick/archive/7.0.8-65.tar.gz
             sha256: 14afaf722d8964ed8de2ebd8184a229e521f1425e18e7274806f06e008bf9aa7
         cleanup:
-          - /etc
-          - /include
-          - /bin
-          - /share
+          - '*'
