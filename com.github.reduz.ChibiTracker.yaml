@@ -12,7 +12,6 @@ finish-args:
 cleanup:
   - /bin/sdl-config
   - /include
-  - /lib/debug
   - /lib/*.a
   - /lib/pkgconfig
   - /share/aclocal
