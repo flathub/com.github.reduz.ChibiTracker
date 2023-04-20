@@ -1,43 +1,41 @@
 app-id: com.github.reduz.ChibiTracker
 runtime: org.freedesktop.Platform
-runtime-version: '20.08'
+runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
 command: chibitracker
 finish-args:
-  - --socket=x11
+  - --socket=wayland
+  - --socket=fallback-x11
   - --share=ipc
   - --socket=pulseaudio
   - --filesystem=home
 cleanup:
-  - /bin/scons*
-  - /man
-  - /lib/scons*
-  - /bin/python*
-  - /bin/pip*
-  - /bin/*.py
+  - /bin/sdl-config
+  - /include
+  - /lib/debug
+  - /lib/*.a
   - /lib/pkgconfig
+  - /share/aclocal
 modules:
-  - shared-modules/SDL/SDL-1.2.15.json
-  - shared-modules/python2.7/python-2.7.json
+  - shared-modules/SDL2/SDL2-with-libdecor.json
+  - shared-modules/SDL/sdl12-compat.json
   - name: scons
     buildsystem: simple
-    cleanup:
-      - '*'
-    build-commands:
-      - python setup.py install --prefix=/app
+    cleanup: ['*']
     sources:
       - type: archive
-        url: http://prdownloads.sourceforge.net/scons/scons-3.0.1.tar.gz
-        sha256: 24475e38d39c19683bc88054524df018fe6949d70fbd4c69e298d39a0269f173
-
+        sha256: 3d43b2303a924816ea0e1b345ff04c9b3e27b53eadf0f26012fc0c29b019685f
+        url: https://downloads.sourceforge.net/project/scons/scons/4.4.0/SCons-4.4.0.tar.gz
+    build-commands:
+      - pip3 install --no-index --no-build-isolation --prefix=${FLATPAK_DEST} .
   - name: chibitracker
     buildsystem: simple
     build-commands:
       - scons
-      - scons install prefix=/app
-      - install -Dm644 com.github.reduz.ChibiTracker.metainfo.xml /app/share/metainfo/com.github.reduz.ChibiTracker.metainfo.xml
-      - install -Dm644 com.github.reduz.ChibiTracker.desktop /app/share/applications/com.github.reduz.ChibiTracker.desktop
-      - install -Dm644 program/cticon.png /app/share/icons/hicolor/32x32/apps/com.github.reduz.ChibiTracker.png
+      - scons install prefix=${FLATPAK_DEST}
+      - install -Dm644 com.github.reduz.ChibiTracker.metainfo.xml ${FLATPAK_DEST}/share/metainfo/com.github.reduz.ChibiTracker.metainfo.xml
+      - install -Dm644 com.github.reduz.ChibiTracker.desktop ${FLATPAK_DEST}/share/applications/com.github.reduz.ChibiTracker.desktop
+      - install -Dm644 program/cticon.png ${FLATPAK_DEST}/share/icons/hicolor/32x32/apps/com.github.reduz.ChibiTracker.png
       - icon_in="program/cticon.png";
         icon_out="com.github.reduz.ChibiTracker.png";
         for s in {32,64,128,256,512}; do
@@ -47,7 +45,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/reduz/chibitracker.git
-        commit: 8decc22858275845a53a313bf06f38f6aa62ec3f
+        commit: 735cf514b764b9388f53637f6ba691c991603577
       - type: patch
         path: patches/type-fix.patch
       - type: file
