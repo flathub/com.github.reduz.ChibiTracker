@@ -9,6 +9,7 @@ finish-args:
   - --share=ipc
   - --socket=pulseaudio
   - --filesystem=home
+  - --device=dri
 cleanup:
   - /bin/sdl-config
   - /include
