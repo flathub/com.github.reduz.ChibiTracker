@@ -18,7 +18,7 @@
     </p>
   </description>
 
-​  <launchable type="desktop-id">com.github.reduz.ChibiTracker.desktop</launchable>
+  <launchable type="desktop-id">com.github.reduz.ChibiTracker.desktop</launchable>
 
 
   <screenshots>
@@ -26,9 +26,38 @@
       <image type="source">http://content.pouet.net/files/screenshots/00027/00027385.jpg</image>
     </screenshot>
   </screenshots>
+
   <releases>
     <release version="1.4.2" date="2010-03-26" />
+    <release version="1.4.1" date="2010-03-26" />
+    <release version="1.4" date="2010-03-26" />
+    <release version="1.2" date="2008-03-08">
+      <description>
+        <p>Released ChibiTracker 1.2. Several bugfixes (loading samples works on windows now), little new features and improved FX (Chorus/Reverb) quality. </p>
+      </description>
+    </release>
+    <release version="1.1" date="2007-10-28">
+      <description>
+        <p>Released ChibiTracker 1.1. This version has many bugfixes, solid XM Import/Export, many small features and a new theme called "FastBlue".</p>
+      </description>
+    </release>
+    <release version="1.0" date="2007-07-08">
+      <description>
+        <p>Released ChibiTracker 1.0. This should be the first stable version. It includes .mod loading, fixed a bug in SMP systems (and many other bugfixes), and incremental search on most file dialogs. Probably many other little features..</p>
+      </description>
+    </release>
+    <release version="1.0~rc1" type="development" date="2006-12-11">
+      <description>
+        <p>Released ChibiTracker 1.0rc1, which means, if no relevant bugs found, this could be the 1.0 release. Many changes happened, including better dialog management, playback fixes and loading samples from inside songs (like in IT).</p>
+      </description>
+    </release>
+    <release version="0.9a" type="development" date="2006-11-24">
+      <description>
+        <p>Initial ChibiTracker Release. As it is, it finally seems stable and run well, but more testing is always needed.</p>
+      </description>
+    </release>
   </releases>
+
   <content_rating type="oars-1.1" />
 
   <url type="homepage">https://github.com/reduz/chibitracker</url>
