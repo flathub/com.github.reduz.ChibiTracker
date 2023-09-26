@@ -17,7 +17,7 @@ cleanup:
   - /lib/pkgconfig
   - /share/aclocal
 modules:
-  - shared-modules/SDL2/SDL2-with-libdecor.json
+  - shared-modules/libdecor/libdecor-0.2.0.json
   - shared-modules/SDL/sdl12-compat.json
   - name: scons
     buildsystem: simple
