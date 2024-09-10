@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2018-2024 Mateus Rodrigues Costa -->
 <component type="desktop-application">
   <id>com.github.reduz.ChibiTracker</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0</project_license>
-  <name>ChibiTracker</name>
-  <summary>ChibiTracker is a portable IT (Impulse Tracker) clone</summary>
 
+  <name>ChibiTracker</name>
+  <summary>Portable IT (Impulse Tracker) clone</summary>
   <description>
     <p>
       ChibiTracker is a portable IT (Impulse Tracker) clone. It is not a 100% clone though, as it adds more features, such as chorus and reverb, stereo samples, an advanced sample editor and more. The user interface also presents some changes, as it can be custom themed and resized.
@@ -20,17 +21,22 @@
 
   <launchable type="desktop-id">com.github.reduz.ChibiTracker.desktop</launchable>
 
-
   <screenshots>
     <screenshot type="default">
-      <image type="source">http://content.pouet.net/files/screenshots/00027/00027385.jpg</image>
+      <image type="source">https://content.pouet.net/files/screenshots/00027/00027385.jpg</image>
     </screenshot>
   </screenshots>
 
   <releases>
-    <release version="1.4.2" date="2010-03-26" />
-    <release version="1.4.1" date="2010-03-26" />
-    <release version="1.4" date="2010-03-26" />
+    <release version="1.4.2" date="2010-03-26">
+      <url>https://github.com/reduz/chibitracker/blob/master/ChangeLog</url>
+    </release>
+    <release version="1.4.1" date="2010-03-26">
+      <url>https://github.com/reduz/chibitracker/blob/master/ChangeLog</url>
+    </release>
+    <release version="1.4" date="2010-03-26">
+      <url>https://github.com/reduz/chibitracker/blob/master/ChangeLog</url>
+    </release>
     <release version="1.2" date="2008-03-08">
       <description>
         <p>Released ChibiTracker 1.2. Several bugfixes (loading samples works on windows now), little new features and improved FX (Chorus/Reverb) quality. </p>
@@ -60,6 +66,16 @@
 
   <content_rating type="oars-1.1" />
 
+  <branding>
+    <color type="primary" scheme_preference="light">#5f9595</color>
+    <color type="primary" scheme_preference="dark">#a6b5b5</color>
+  </branding>
+
+  <developer id="com.github.reduz">
+    <name>Juan Linietsky (reduz)</name>
+  </developer>
+
+  <url type="bugtracker">https://github.com/reduz/chibitracker/issues</url>
   <url type="homepage">https://github.com/reduz/chibitracker</url>
-  <developer_name>Juan Linietsky (reduz)</developer_name>
+  <url type="vcs-browser">https://github.com/reduz/chibitracker</url>
 </component>
