@@ -6,7 +6,7 @@
   <project_license>GPL-2.0</project_license>
 
   <name>ChibiTracker</name>
-  <summary>Portable IT (Impulse Tracker) clone</summary>
+  <summary>Portable Impulse Tracker clone</summary>
   <description>
     <p>
       ChibiTracker is a portable IT (Impulse Tracker) clone. It is not a 100% clone though, as it adds more features, such as chorus and reverb, stereo samples, an advanced sample editor and more. The user interface also presents some changes, as it can be custom themed and resized.
@@ -66,6 +66,23 @@
 
   <content_rating type="oars-1.1" />
 
+  <provides>
+    <binary>chibitracker</binary>
+
+    <mediatype>audio/x-mod</mediatype>
+    <mediatype>audio/x-s3m</mediatype>
+    <mediatype>audio/x-xm</mediatype>
+    <mediatype>audio/x-it</mediatype>
+  </provides>
+
+  <requires>
+    <internet>offline-only</internet>
+  </requires>
+  <recommends>
+    <control>pointing</control>
+    <control>keyboard</control>
+  </recommends>
+
   <branding>
     <color type="primary" scheme_preference="light">#5f9595</color>
     <color type="primary" scheme_preference="dark">#a6b5b5</color>
@@ -74,6 +91,19 @@
   <developer id="com.github.reduz">
     <name>Juan Linietsky (reduz)</name>
   </developer>
+
+  <keywords>
+    <keyword translate="no">Impulse Tracker</keyword>
+    <keyword translate="no">mod</keyword>
+    <keyword translate="no">s3m</keyword>
+    <keyword translate="no">xm</keyword>
+    <keyword translate="no">it</keyword>
+    <keyword>sound</keyword>
+    <keyword>music</keyword>
+    <keyword>music tracker</keyword>
+    <keyword>music sequencer</keyword>
+    <keyword>clone</keyword>
+  </keywords>
 
   <url type="bugtracker">https://github.com/reduz/chibitracker/issues</url>
   <url type="homepage">https://github.com/reduz/chibitracker</url>
