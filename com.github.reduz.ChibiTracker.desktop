@@ -2,6 +2,11 @@
 Type=Application
 Version=1.5
 Name=ChibiTracker
-Exec=chibitracker
+GenericName=Music Tracker
+Comment=Impulse Tracker clone
 Icon=com.github.reduz.ChibiTracker
-Categories=AudioVideo;Audio;Sequencer
+TryExec=chibitracker
+Exec=chibitracker %f
+MimeType=audio/x-mod;audio/x-s3m;audio/x-xm;audio/x-it;
+Categories=AudioVideo;Audio;Sequencer;
+Keywords=Impulse Tracker;
